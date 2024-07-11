@@ -33,10 +33,8 @@ export class ShortUrlsEffects {
       ofType(urlActions.DeleteShortUrl),
       mergeMap((action) =>
         this.shortUrlService.removeShortUrlById(action.shortUrlId, action.userId).pipe(
-          map((shortUrlId, userId) => {
-            console.log(shortUrlId, userId)
-            return urlActions.DeleteShortUrlSuccess({ shortUrlId })
-          }),
+          map((shortUrlId, userId) =>
+            urlActions.DeleteShortUrlSuccess({ shortUrlId })),
           catchError(error => of(urlActions.DeleteShortUrlFailure(error)))
         ))
     ))

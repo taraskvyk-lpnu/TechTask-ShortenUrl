@@ -12,10 +12,9 @@ export class AuthEffects {
   this.actions$.pipe(
     ofType(authActions.LoginUser),
     mergeMap((action) => this.authService.login(action.loginRequest).pipe(
-      map(loginResponse => {
-        console.log(loginResponse);
-        return authActions.LoginUserSuccess({loginResponse})
-      }),
+      map(loginResponse =>
+         authActions.LoginUserSuccess({loginResponse})
+      ),
       catchError(error => {
         console.log(error);
         return of(authActions.LoginUserFailure(error))
@@ -27,11 +26,9 @@ export class AuthEffects {
     this.actions$.pipe(
       ofType(authActions.RegisterUser),
       mergeMap((action) => this.authService.register(action.registerRequest).pipe(
-        map(registerResponse => {
-
-          console.log(registerResponse)
-          return authActions.RegisterUserSuccess({registerResponse})
-        }),
+        map(registerResponse =>
+          authActions.RegisterUserSuccess({registerResponse})
+        ),
         catchError(error => of(authActions.RegisterUserFailure(error)))
       ))
     ))

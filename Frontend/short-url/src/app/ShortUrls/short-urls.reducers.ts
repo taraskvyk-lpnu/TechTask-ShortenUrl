@@ -6,14 +6,10 @@ export const initialState : ShortUrl[] = [];
 
 export const ShortUrlsReducer = createReducer(
   initialState,
-  on(urlsActions.AddShortUrl, (state, shortUrl) =>
-  {
-    console.log(shortUrl)
-    return state
-  }),
+  on(urlsActions.AddShortUrl, (state, shortUrl) => state),
   on(urlsActions.AddShortUrlSuccess, (state, {shortUrl}) =>
   {
-    console.log(shortUrl);
+    console.log('Reducer - ShortUrl Added:', shortUrl);
     return [...state, shortUrl]
   }),
   on(urlsActions.AddShortUrlFailure, (state, {error}) => {
@@ -31,11 +27,7 @@ export const ShortUrlsReducer = createReducer(
     return state;
   }),
 
-  on(urlsActions.DeleteShortUrl, (state, {shortUrlId, userId}) =>
-  {
-    console.log('Reducer - ShortUrl Removing:', shortUrlId, userId);
-    return state
-  }),
+  on(urlsActions.DeleteShortUrl, (state, {shortUrlId, userId}) => state),
   on(urlsActions.DeleteShortUrlSuccess, (state, {shortUrlId}) => {
 
     console.log('Reducer - ShortUrl Removed:', shortUrlId);

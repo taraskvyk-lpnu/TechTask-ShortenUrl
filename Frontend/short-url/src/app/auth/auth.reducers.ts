@@ -18,7 +18,6 @@ export const AuthReducer = createReducer(
     return state
   }),
   on(authActions.LoginUserSuccess, (state, {loginResponse}) => {
-    console.log('loaded response', loginResponse);
     const newState = {
       ...state,
       id: loginResponse.id,
@@ -26,7 +25,6 @@ export const AuthReducer = createReducer(
       jwtToken: loginResponse.jwtToken
     };
 
-    console.log('loaded state', newState);
     return newState;
   }),
   on(authActions.LoginUserFailure, (state, {error}) => {
@@ -43,7 +41,6 @@ export const AuthReducer = createReducer(
       jwtToken: registerResponse.jwtToken
     };
 
-    console.log('loaded state', newState);
     return newState;
   }),
   on(authActions.RegisterUserFailure, (state, {error}) => {

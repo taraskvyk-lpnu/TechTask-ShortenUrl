@@ -31,7 +31,6 @@ export class ShortUrlService {
   }
 
   removeShortUrlById(id: number, userId: number): Observable<number> {
-    console.log('Service removes: ', id, userId)
     return this.httpClient.delete<number>(this.apiUrl + `/${id}`, {params: {userId : userId}});
   }
 }

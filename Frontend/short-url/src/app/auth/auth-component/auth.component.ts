@@ -32,7 +32,6 @@ export class AuthComponent {
   }
 
   logIn(){
-    console.log(this.authRequest)
     this.store.dispatch(LoginUser({loginRequest: this.authRequest}));
     this.resetForm();
     this.router.navigate(['']);

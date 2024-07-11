@@ -22,12 +22,10 @@ export class AuthService {
   }
 
   register(registerRequest: AuthRequest) {
-    console.log(registerRequest)
     return this.httpClient.post<AuthenticationResponse>(this.authApi + '/register', registerRequest);
   }
 
   login(loginRequest: AuthRequest) {
-    console.log(loginRequest)
     return this.httpClient.post<AuthenticationResponse>(this.authApi + '/login', loginRequest);
   }
 

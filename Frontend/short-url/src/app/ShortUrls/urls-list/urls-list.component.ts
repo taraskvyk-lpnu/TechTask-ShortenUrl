@@ -47,7 +47,7 @@ export class UrlsListComponent implements OnInit {
   }
 
   canDelete(url: ShortUrl): boolean {
-    return this.user.roles.includes('Admin') || (url.createdByUserId === this.user.id);
+    return this.user.roles.includes('Admin') || (url.createdByUserId == this.user.id);
   }
 
   getAllShortUrls() {
@@ -58,16 +58,7 @@ export class UrlsListComponent implements OnInit {
     this.store.dispatch(GetShortUrl({shortUrlId: id}));
   }
 
-  addShortUrl(shortUrl: ShortUrl) {
-    this.store.dispatch(AddShortUrl({ shortUrl: shortUrl }));
-  }
-
-  updateShortUrl(id: number, shortUrl: ShortUrl) {
-    this.store.dispatch(UpdateShortUrl({ shortUrl: shortUrl }));
-  }
-
   deleteShortUrlById(shortUrlId: number) {
-    console.log(shortUrlId, this.user.id)
     this.store.dispatch(DeleteShortUrl({shortUrlId, userId: this.user.id}));
   }
 }

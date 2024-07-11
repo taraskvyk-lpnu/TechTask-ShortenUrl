@@ -1,0 +1,24 @@
+<div class="container d-flex justify-content-center">
+  <form class="needs-validation" novalidate>
+    <div class="form-group">
+      <label for="login">Login (Email)*</label>
+      <input class="form-control" #login="ngModel" name="login" type="text" id="login" [(ngModel)]="authRequest.email" required>
+      <div class="invalid-feedback" *ngIf="login.invalid && (login.dirty || login.touched)">
+        Login is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password*</label>
+      <input class="form-control" #password="ngModel" name="password" type="password" id="password" [(ngModel)]="authRequest.password" required>
+      <div class="invalid-feedback" *ngIf="password.invalid && (password.dirty || password.touched)">
+        Password is required.
+      </div>
+    </div>
+
+    <div class="form-group d-flex justify-content-center">
+      <button type="button" (click)="register()" class="btn btn-primary m-1">Register</button>
+      <button type="button" (click)="logIn()" class="btn btn-primary m-1">Login</button>
+    </div>
+  </form>
+</div>

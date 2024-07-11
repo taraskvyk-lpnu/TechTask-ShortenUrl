@@ -1,0 +1,109 @@
+# Visual Studio / Rider / JetBrains
+.vs/
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio code coverage results
+*.opendb
+
+# Tye generated files
+.tye/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio IntelliSense
+*.vscode/
+*.vscodeignore
+.vscode/
+
+# Rider (JetBrains Rider IDE)
+.idea/
+*.sln.iml
+
+# Resharper
+_ReSharper*/
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# TypeScript
+*.js
+*.map
+
+# Node.js
+node_modules/
+jspm_packages/
+
+# Yarn
+yarn.lock
+package-lock.json
+
+# Angular
+/dist/
+/$folder-hr iconov/
+
+# Blazor
+/_framework/
+
+# Miscellaneous
+ClientBin/
+[Ss]tyle[Cc]op.*
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.pfx
+*.publishsettings
+node_modules/
+orleans.codegen.cs
+
+# GhostDoc plugin setting file
+*.GhostDoc.xml
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.idea/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.idea/
+.vscode/
+
+# CocoaPods
+Pods/
+**/*.xcworkspace/
+
+# Carthage
+/Carthage/
+
+# Fastlane
+/fastlane/report.xml
+/fastlane/Preview.html
+/fastlane/screenshots

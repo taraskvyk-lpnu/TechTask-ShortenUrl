@@ -1,0 +1,9 @@
+
+tr, td, th {
+  text-align: center;
+}
+
+td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}

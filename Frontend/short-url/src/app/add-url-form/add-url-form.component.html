@@ -1,0 +1,20 @@
+<div class="container d-flex justify-content-center">
+  <form (ngSubmit)="addShortUrl()" class="needs-validation" novalidate>
+    <div class="form-group">
+      <label for="originalUrl">Original Url*</label>
+      <input class="form-control" #originalUrl="ngModel" name="originalUrl" type="text" id="originalUrl" [(ngModel)]="shortUrl.originalUrl" required>
+      <div class="invalid-feedback" *ngIf="originalUrl.invalid && (originalUrl.dirty || originalUrl.touched)">
+        Original Url is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input class="form-control" #description="ngModel" name="description" type="text" id="description" [(ngModel)]="shortUrl.description">
+    </div>
+
+    <div class="form-group d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,6 @@
+<mat-toolbar color="primary">
+  <span class="spacer"></span>
+  <button mat-button routerLink="/urls-table">Home</button>
+  <button mat-button routerLink="/add-url" *ngIf="(user$ | async)?.id !== 0">Add New</button>
+  <button mat-button routerLink="/auth" *ngIf="(user$ | async)?.id === 0">Authorize</button>
+</mat-toolbar>
